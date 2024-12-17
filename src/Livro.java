@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Livro {
     String titulo;
     String autor;
@@ -9,5 +11,18 @@ public class Livro {
         this.autor = autor;
         this.isbn = isbn;
         this.disponivel = true;
+    }
+
+    public void emprestar() {
+        if (disponivel){
+            disponivel= false;
+        }
+    }
+
+    public void devolver () {
+        disponivel = true;
+    }
+    public void exibirDetalhes(){
+        System.out.println("Título: " +titulo + "Autor: " +autor + "ISBN: " +isbn + "Disponibilidade: " +disponivel);
     }
 }

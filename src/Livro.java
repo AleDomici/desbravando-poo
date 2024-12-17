@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 
 public class Livro {
     String titulo;
@@ -22,6 +21,10 @@ public class Livro {
     public void devolver () {
         disponivel = true;
     }
+    public boolean isDisponivel(){
+        return disponivel;
+    }
+
     public void exibirDetalhes(){
         System.out.println("Título: " +titulo + "Autor: " +autor + "ISBN: " +isbn + "Disponibilidade: " +disponivel);
     }

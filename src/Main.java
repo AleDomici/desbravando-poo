@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Criação de uma instância da classe Biblioteca para gerenciar o sistema
      Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
-
+            //Loop While para interagir com o menu
         while (true) {
             System.out.println("Bem-vindo(a) ao Sistema de Gerenciamento de Biblioteca!");
             System.out.println("1. Cadastrar livro");
@@ -16,17 +17,21 @@ public class Main {
             System.out.println("6. Sair");
             System.out.println("Escolha uma opção: ");
 
-            int opcao = scanner.nextInt();
+            int opcao = scanner.nextInt();          //le a opção escolhida pelo user
              scanner.nextLine();
 
+             // Bloco switch que executa uma ação conforme a opção escolhida pelo Usuário
              switch (opcao) {
                  case 1:
+                     // Cadastrar livro
                      System.out.print("Digite o título do livro: ");
                      String titulo = scanner.nextLine();
                      System.out.print("Digite o autor do livro: ");
                      String autor = scanner.nextLine();
                      System.out.print("Digite o ISBN do livro: ");
                      String isbn = scanner.nextLine();
+
+                        // Chama o método cadastroLivro da classe Biblioteca, passando um objeto Livro criado
                      biblioteca.cadastroLivro(new Livro(titulo, autor, isbn));
                      System.out.println("Livro cadastrado com sucesso!");
 
@@ -38,6 +43,7 @@ public class Main {
                      System.out.print("Digite o ID do usuário: ");
                      int id = scanner.nextInt();
                      scanner.nextLine();
+
 
                      biblioteca.cadastroUsuario(new Usuario(nome, id));
                      System.out.println("Usuário cadastrado com sucesso!");

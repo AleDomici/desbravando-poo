@@ -76,9 +76,9 @@ public class Biblioteca {
         return null;
     }
 
-    private Usuario encontrarUsuarioPorId(int id) {
+    private Usuario encontrarUsuarioPorId(int idUsuario) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getId() == id) {
+            if (usuario.getId() == idUsuario) {
                 return usuario;
             }
         }

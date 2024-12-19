@@ -37,4 +37,8 @@ public class Usuario extends Pessoa{
     public ArrayList<Livro> getLivrosEmprestados(){
         return livrosEmprestados;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }

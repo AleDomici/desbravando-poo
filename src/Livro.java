@@ -35,7 +35,7 @@ public class Livro {
         }
     }
 
-    private boolean isDisponivel() {
+    protected boolean isDisponivel() {
         return isDisponivel;
     }
 

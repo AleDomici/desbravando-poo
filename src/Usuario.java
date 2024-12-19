@@ -1,19 +1,18 @@
 import java.util.ArrayList;
 
 public class Usuario extends Pessoa{
-    private int id;
+
     public ArrayList<Livro> livrosEmprestados;
 
     public Usuario(String nome, int id) {
-        super(nome);
-        this.id = id;
+        super(nome, id);
         this.livrosEmprestados = new ArrayList<>();
     }
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Nome: " + nome);
-        System.out.println("ID: " + id);
+        System.out.println("Nome: " + getNome());
+        System.out.println("ID: " + getId());
         System.out.println("Livros emprestados: " + livrosEmprestados.size());
     }
 
@@ -33,18 +32,5 @@ public class Usuario extends Pessoa{
             } else {
                 return false;
             }
-    }
-
-
-    public int getId(){
-        return id;
-    }
-
-    public ArrayList<Livro> getLivrosEmprestados(){
-        return livrosEmprestados;
-    }
-
-    public String getNome() {
-        return nome;
     }
 }

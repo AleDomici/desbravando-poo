@@ -9,13 +9,13 @@ public class Biblioteca {
         this.usuarios = new ArrayList<>();
     }
 
-    public void cadastroLivro(Livro livro) {
+    public void cadastrarLivro(Livro livro) {
         livros.add(livro);
 
         System.out.println("Livro cadastrado: " + livro.getTitulo());
     }
 
-    public void cadastroUsuario(Usuario usuario) {
+    public void cadastrarUsuario(Usuario usuario) {
         usuarios.add(usuario);
 
         System.out.println("Usuário cadastrado: " + usuario.getNome());

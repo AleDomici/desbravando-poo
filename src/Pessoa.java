@@ -1,11 +1,10 @@
 import java.sql.SQLOutput;
 
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
+
     public Pessoa(String nome) {
         this.nome = nome;
     }
-    public void exibirDetalhe(){
-        System.out.println("Nome: " + nome);
-    }
+    public abstract void exibirDetalhes();
 }

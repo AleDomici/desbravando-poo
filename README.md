@@ -1,6 +1,6 @@
 # 📚 **Desbravando POO**
 
-🚀 Bem-vindo ao repositório **Desbravando POO**! Este projeto foi criado para explorar os conceitos de **Programação Orientada a Objetos (POO)** de forma prática e interativa. 🎉
+🚀 Bem-vindo ao repositório **Desbravando POO**! Neste projeto foi criado uma Biblioteca para explorar os conceitos de **Programação Orientada a Objetos (POO)** de forma prática e interativa. 🎉
 
 ---
 

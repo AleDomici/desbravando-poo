@@ -28,7 +28,6 @@ public class Usuario extends Pessoa{
         System.out.println("Livros emprestados: " + livrosEmprestados.size());
     }
 
-
     /**
      * Adiciona um livro à lista de livros emprestados, se o usuário não tiver atingido o limite de 3 livros.
      *

@@ -1,13 +1,29 @@
 import java.util.ArrayList;
 
+/**
+ * Classe Biblioteca
+ * Responsável por gerir o cadastro de livros e utilizadores, além de realizar
+ * operações de empréstimo e devolução de livros
+ */
+
 public class Biblioteca {
     private final ArrayList<Livro> livros;
     private final ArrayList<Usuario> usuarios;
+
+    /**
+     * Construtor da class Biblioteca
+     * Inicializa as listas de livro e usuários
+     */
 
     public Biblioteca() {
         this.livros = new ArrayList<>();
         this.usuarios = new ArrayList<>();
     }
+
+    /**
+     * Cadastra um novo livro de biblioteca
+     * @param livro livro Objeto do tipo Livro a ser cadastrado
+     */
 
     public void cadastrarLivro(Livro livro) {
         livros.add(livro);
@@ -15,11 +31,23 @@ public class Biblioteca {
         System.out.println("Livro cadastrado: " + livro.getTitulo());
     }
 
+    /**
+     * Cadastra um novo usuário na biblioteca
+     * @param usuario Objeto de tipo Usuario a ser cadastrado
+     */
+
     public void cadastrarUsuario(Usuario usuario) {
         usuarios.add(usuario);
 
         System.out.println("Usuário cadastrado: " + usuario.getNome());
     }
+
+    /**
+     * Realiza o empréstimo de um livro para o usuário
+     *
+     * @param isbn isbn Código ISBN do livro a ser emprestado.
+     * @param idUsuario Identificador do usuário que realizará o emprestamo
+     */
 
     public void realizarEmprestimo(String isbn, int idUsuario) {
         Livro livro = encontrarLivroPorISBN(isbn);
@@ -41,6 +69,12 @@ public class Biblioteca {
         }
     }
 
+    /**
+     * Realiza a devolução de um livro emprestado por um usuário.
+     *
+     * @param isbn      Código ISBN do livro a ser devolvido.
+     * @param idUsuario Identificador do usuário que realizará a devolução.
+     */
     public void realizarDevolucao(String isbn, int idUsuario) {
         Livro livro = encontrarLivroPorISBN(isbn);
         Usuario usuario = encontrarUsuarioPorId(idUsuario);
@@ -57,6 +91,10 @@ public class Biblioteca {
         }
     }
 
+    /**
+     * Exibe no console a lista de livros disponíveis para empréstimo.
+     */
+
     public void exibirLivrosDisponiveis() {
         System.out.println("Livros disponíveis: ");
         for (Livro livro : livros) {
@@ -67,6 +105,13 @@ public class Biblioteca {
         }
     }
 
+    /**
+     * Busca um livro na lista de livros cadastrados pelo ISBN.
+     *
+     * @param isbn Código ISBN do livro a ser encontrado.
+     * @return Objeto Livro correspondente ao ISBN, ou null se não for encontrado.
+     */
+
     private Livro encontrarLivroPorISBN(String isbn) {
         for (Livro livro : livros) {
             if (livro.getIsbn().equals(isbn)) {
@@ -75,6 +120,13 @@ public class Biblioteca {
         }
         return null;
     }
+
+    /**
+     * Busca um usuário na lista de usuários cadastrados pelo ID.
+     *
+     * @param idUsuario Identificador do usuário a ser encontrado.
+     * @return Objeto Usuario correspondente ao ID, ou null se não for encontrado.
+     */
 
     private Usuario encontrarUsuarioPorId(int idUsuario) {
         for (Usuario usuario : usuarios) {

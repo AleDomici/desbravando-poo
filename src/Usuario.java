@@ -50,12 +50,12 @@ public class Usuario extends Pessoa{
      */
 
     public boolean removerLivro(Livro livro) {
-            if (livrosEmprestados.contains(livro)) {
-                livrosEmprestados.remove(livro);
-                livro.devolver();
-                return true;
-            } else {
-                return false;
-            }
+        if (livrosEmprestados.contains(livro)) {
+            livrosEmprestados.remove(livro);
+            livro.devolver();
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -15,7 +15,7 @@ public class Main {
              switch (opcao) {
                  case 1:
                      cadastrarLivro(scanner, biblioteca);
-
+                     break;
                  case 2:
                      cadastrarUsuario(scanner, biblioteca);
                      break;

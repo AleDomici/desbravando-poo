@@ -1,8 +1,21 @@
 import java.util.Scanner;
 
+/**
+ * Classe principal do sistema de gerenciamento de biblioteca.
+ * Permite cadastrar livros e usuários, realizar empréstimos e devoluções,
+ * além de exibir os livros disponíveis.
+ */
+
 public class Main {
+
+    /**
+     * Método principal que inicializa o sistema e exibe o menu interativo.
+     *
+     * @param args Argumentos da linha de comando (não utilizados).
+     */
+
     public static void main(String[] args) {
-        // Criação de uma instância da classe Biblioteca para gerenciar o sistema
+
      Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
             //Loop While para interagir com o menu
@@ -43,6 +56,10 @@ public class Main {
         }
     }
 
+    /**
+     * Exibe o menu principal do sistema.
+     */
+
     private static void exibirMenu() {
         System.out.println("Bem-vindo ao Sistema de Gerenciamento de Biblioteca!");
         System.out.println("1. Cadastrar livro");
@@ -54,6 +71,13 @@ public class Main {
 
         System.out.print("Escolha uma opção: ");
     }
+
+    /**
+     * Cadastra um novo livro na biblioteca.
+     *
+     * @param scanner    Scanner para entrada de dados do usuário.
+     * @param biblioteca Instância da classe Biblioteca.
+     */
 
     private static void cadastrarLivro(Scanner scanner, Biblioteca biblioteca) {
         System.out.println("Digite o título do livro: ");
@@ -70,6 +94,12 @@ public class Main {
         System.out.println("Livro cadastrado com sucesso!");
     }
 
+    /**
+     * Cadastra um novo usuário na biblioteca.
+     *
+     * @param scanner    Scanner para entrada de dados do usuário.
+     * @param biblioteca Instância da classe Biblioteca.
+     */
     private static void cadastrarUsuario(Scanner scanner, Biblioteca biblioteca) {
         System.out.println("Digite o nome do usuário: ");
         String nome = scanner.nextLine();
@@ -82,6 +112,13 @@ public class Main {
         System.out.println("Usuário cadastrado com sucesso!");
     }
 
+    /**
+     * Realiza o empréstimo de um livro para um usuário.
+     *
+     * @param scanner    Scanner para entrada de dados do usuário.
+     * @param biblioteca Instância da classe Biblioteca.
+     */
+
     private static void realizarEmprestimo(Scanner scanner, Biblioteca biblioteca) {
         System.out.println("Digite ISBN do livro: ");
         String isbn = scanner.nextLine();
@@ -91,6 +128,12 @@ public class Main {
         biblioteca.realizarEmprestimo(isbn,idUsuario);
     }
 
+    /**
+     * Realiza a devolução de um livro emprestado por um usuário.
+     *
+     * @param scanner    Scanner para entrada de dados do usuário.
+     * @param biblioteca Instância da classe Biblioteca.
+     */
     private static void realizarDevolucao(Scanner scanner, Biblioteca biblioteca) {
         System.out.println("Digite o ISBN do livro: ");
         String isbn = scanner.nextLine();
@@ -99,6 +142,11 @@ public class Main {
 
         biblioteca.realizarEmprestimo(isbn,idUsuario);
     }
+    /**
+     * Exibe a lista de livros disponíveis na biblioteca.
+     *
+     * @param biblioteca Instância da classe Biblioteca.
+     */
     private static void exibirLivrosDisponiveis(Biblioteca biblioteca) {
         biblioteca.exibirLivrosDisponiveis();
     }

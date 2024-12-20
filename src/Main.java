@@ -86,7 +86,7 @@ public class Main {
         System.out.println("Digite ISBN do livro: ");
         String isbn = scanner.nextLine();
         System.out.println("Digite o ID do usuário: ");
-        int idUsuario = Integer.parseInt(scanner.nextLine());
+        int idUsuario = Integer.parseInt(scanner.nextLine()); //
 
         biblioteca.realizarEmprestimo(isbn,idUsuario);
     }

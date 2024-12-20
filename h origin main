@@ -1,0 +1,185 @@
+[33mcommit e0f2bc3e9b21c36abf8aedd3776a043312f31e69[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Fri Dec 20 09:58:54 2024 -0300
+
+    docs(Usuario): adiciona comentários explicativos sobre os métodos de gerenciamento de livros
+
+[33mcommit 2fed581a96856d5d70a7bd3f5e177284c4f24ade[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 16:00:58 2024 -0300
+
+    refactor: ajusta a classe Usuario para refletir mudanças na classe Pessoa
+    - Remove o atributo `id` da classe `Usuario`, pois agora é gerenciado pela classe `Pessoa`.
+    - Atualiza o construtor para utilizar o novo construtor da classe `Pessoa` que aceita `nome` e `id`.
+    - Substitui o acesso direto ao atributo `nome` pelo método `getNome()` da classe `Pessoa`.
+    - Substitui o acesso direto ao atributo `id` pelo método `getId()` da classe `Pessoa`.
+    - Remove o método `getId` e `getNome` da classe `Usuario`, pois agora são herdados de `Pessoa`.
+
+[33mcommit dcb8eeafe9c2000dea06182ca537cc0d35d6f281[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 15:58:10 2024 -0300
+
+    refactor: altera a classe Pessoa para incluir novo atributo e métodos
+    - Adiciona o atributo `id` à classe `Pessoa`. - Atualiza o construtor para aceitar e inicializar o novo atributo `id`. - Adiciona os métodos `getNome` e `getId` para acessar os atributos `nome` e `id`.
+    - Altera o modificador de acesso do atributo `nome` de `protected` para `private` para encapsulamento.
+
+[33mcommit c315b31ea3db5c1741e1541e349a19b6eea92edb[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 15:55:19 2024 -0300
+
+    refactor: melhora a estrutura do menu e adiciona métodos auxiliares
+     - Remove a importação desnecessária de `javax.sound.midi.Soundbank`
+      - Adiciona métodos auxiliares para modularizar as operações do menu (`cadastrarLivro`, `cadastrarUsuario`, `realizarEmprestimo`, `realizarDevolucao`, `exibirLivrosDisponiveis`).
+       - Melhora a exibição do menu com uma mensagem mais clara para o usuário.
+       - Corrige a duplicação de lógica ao reutilizar métodos auxiliares.
+
+[33mcommit b84cc3ccfe73df4db4dac4e8c4fd3fbdcd97fa0c[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 15:53:28 2024 -0300
+
+    refactor: renomeia parâmetro do método `encontrarUsuarioPorId` Renomeia o parâmetro `id` para `idUsuario` no método `encontrarUsuarioPorId` para melhorar a clareza e consistência do código.
+
+[33mcommit d1c32e0347473172bf5820e1f7f2ff98f6ccf5ce[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 14:41:41 2024 -0300
+
+    refactor: exclui import que não esta sendo utilizado
+
+[33mcommit 0998f2ba7645461bb0090cd56d6b5af1c786397f[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 14:05:39 2024 -0300
+
+    refactor: renomeia métodos 'cadastrarUsuario' e 'cadastrarLivro' para seguir regra de nomenclatura
+
+[33mcommit 82d6a2309ba8ed7220de585cf0d1149a126bbbf9[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 13:47:25 2024 -0300
+
+    feat: implementar estrutura inicial do menu e métodos de cadastro de livro e usuário
+
+[33mcommit 562557fe34b113acbfbcf4955c95d20b92a01a85[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 12:34:44 2024 -0300
+
+    feat: refatorar código de gestão de biblioteca
+    
+    - Alterado nome de métodos para melhorar legibilidade: 'buscarLivroPorIsbn' para 'encontrarLivroPorISBN' e 'buscarUsuarioPorId' para 'encontrarUsuarioPorId'.
+    - Adicionada verificação de erro nas operações de empréstimo e devolução, com mensagens de erro mais claras.
+    - Implementado log para exibir informações sobre livros e usuários cadastrados.
+    - Modificada a lógica de empréstimo para verificar se o livro está disponível antes de realizar o empréstimo e evitar duplicidade de empréstimos.
+    - Alteração nos métodos de devolução para melhorar a verificação da existência do livro nos registros do usuário.
+    - Melhorado o método de exibição de livros disponíveis com mais informações (Título, Autor, ISBN).
+
+[33mcommit 5ad87ed464c213f3709d523cb5a66bf8e21c77e6[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 12:30:10 2024 -0300
+
+    refactor: altera o método removerLivro para tornar booleano indicando suceso ou falha na remoção
+
+[33mcommit dfeb0bfcdee1a506201d263846dae4a07ef7a74b[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 11:56:03 2024 -0300
+
+    refactor: altera o método isDisponivel para protected
+
+[33mcommit 104153e4d4385fd1cbd119389718fa50874d0416[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 11:42:33 2024 -0300
+
+    feat: adiciona método getNome() na classe Usuario para acessar nome do usuário
+
+[33mcommit b6449cb0864f34bb88b0f56c0b9311fc8578fb46[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 11:32:20 2024 -0300
+
+    style(livro): reorganiza o código com os principios clean code
+
+[33mcommit 4d38da3d87a2e7efc75a4ca4599eef78cae13707[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 11:01:56 2024 -0300
+
+    feat(usuario): implementa método exibirDetalhes para sobrescrever a classe abstrata e adiciona métodos para gerenciar livros emprestados (adicionar e remover)
+
+[33mcommit f2fd5c2fd6e5cb84432d0f0c5e1539d5f4001645[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 10:59:18 2024 -0300
+
+    feat(pessoa): torna a classe abstrata e adiciona método abstrato exibirDetalhes
+
+[33mcommit 6936b6091b38d75ce0a6aa78035c79115a34782e[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Thu Dec 19 10:34:49 2024 -0300
+
+    feat: cria classe Pessoa.java com atributo nome e método exibirDetalhe
+
+[33mcommit e44c387cd21eee161b412b32a494c604fcc0b179[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Wed Dec 18 15:44:37 2024 -0300
+
+    docs: adicionar comentários explicativos no código para clareza
+
+[33mcommit eed7c956a5830a4ae0c6c1fb9b7ce7b1d8585f92[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Wed Dec 18 15:21:45 2024 -0300
+
+    feat: implementar sistema de gerenciamento de biblioteca com cadastro de livros e usuários, empréstimos e devoluções
+
+[33mcommit 615a7c02febbfd92b150415b1b0082b8871da0b2[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 17:13:01 2024 -0300
+
+    fix:Adiciona getter isDisponivel() na classe Livro para corrigir acesso ao campo 'disponivel' na classe Biblioteca
+
+[33mcommit 8db87f45f6c8c4c43145c6d09fa9654fd02ae217[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 17:06:49 2024 -0300
+
+    Fix: Corrige erro na classe Usuario na exibição de detalhes e adiciona método removerLivro
+
+[33mcommit 9ea8f2daad0c17c1d6d8adc1f1d4acdb42c146f6[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 16:36:01 2024 -0300
+
+    feat: adiciona métodos de cadastro de usuário e realização de empréstimo na classe Biblioteca
+
+[33mcommit 676591cc312498ad78f3d991d68c154538ffeb43[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 16:25:41 2024 -0300
+
+    feat: cria classe Biblioteca com atributos livros e usuarios
+
+[33mcommit b9a4fadb3701f3cb4e3a255bc049a27293270eb5[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 16:15:55 2024 -0300
+
+    Iniciando projeto
+
+[33mcommit c6fa3012ea95ad2fcb3cee81d6e672ad8e8cd36a[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 16:15:35 2024 -0300
+
+    feat: cria classe Usuario com atributos nome, id e livros emprestados
+
+[33mcommit 591a5195cb7fff6f778b549001732f0978b61579[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 16:00:37 2024 -0300
+
+    feat: adiciona métodos de emprestar, devolver e exibir detalhes na classe Livro
+
+[33mcommit a77ee1deb1bef2726bc5dddf4055c3d71c1bc780[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Tue Dec 17 15:55:24 2024 -0300
+
+    feat: cria classe Livro com atributos título, autor, ISBN e disponibilidade
+
+[33mcommit 3248a91002af9b63fecf57e05230092cfa50307d[m
+Author: [AleDomici] <alessandra.domiciano@zup.com.br>
+Date:   Mon Dec 16 16:06:10 2024 -0300
+
+    docs:iniciando um novo projeto
+
+[33mcommit 8e16deb7b026bc529c3060e3889bcba5da54bb43[m
+Author: Alessandra D.Zup <alessandra.domiciano@zup.com.br>
+Date:   Mon Dec 16 15:37:20 2024 -0300
+
+    Initial commit

@@ -63,6 +63,7 @@ public class Biblioteca {
         }
         if (livro.isDisponivel()) {
             usuario.adicionarLivro(livro);
+            livro.emprestar(); // Atualiza o status de disponibilidade
             System.out.println("Empréstimo realizado com sucesso!");
         } else {
             System.out.println("Empréstimo não realizado. Verifique disponibilidade ou limite de livros.");
@@ -100,7 +101,7 @@ public class Biblioteca {
         for (Livro livro : livros) {
             // Usando o getter isDisponivel() para acessar a disponibilidade do livro
             if (livro.isDisponivel()) {
-                System.out.println("Título: " + livro.getTitulo() + "Autor: " + livro.getAutor() + "ISBN: " + livro.getIsbn());
+                System.out.println("Título: " + livro.getTitulo() + ", Autor: " + livro.getAutor() + ", ISBN: " + livro.getIsbn());
             }
         }
     }

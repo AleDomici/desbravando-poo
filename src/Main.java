@@ -140,7 +140,7 @@ public class Main {
         System.out.println("Digite o ID do usuário: ");
         int idUsuario = Integer.parseInt(scanner.nextLine());
 
-        biblioteca.realizarEmprestimo(isbn,idUsuario);
+        biblioteca.realizarDevolucao(isbn,idUsuario);
     }
     /**
      * Exibe a lista de livros disponíveis na biblioteca.

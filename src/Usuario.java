@@ -12,7 +12,7 @@ public class Usuario extends Pessoa{
      */
 
     public Usuario(String nome, int id) {
-        super(nome, id);
+        super(nome, id);  // Passando os parâmetros para a classe Pessoa
         this.livrosEmprestados = new ArrayList<>();
     }
 
@@ -23,10 +23,11 @@ public class Usuario extends Pessoa{
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("ID: " + getId());
+        System.out.println("Nome: " + getNome());  // Chama o método herdado da classe Pessoa
+        System.out.println("ID: " + getId());      // Chama o método herdado da classe Pessoa
         System.out.println("Livros emprestados: " + livrosEmprestados.size());
     }
+
 
     /**
      * Adiciona um livro à lista de livros emprestados, se o usuário não tiver atingido o limite de 3 livros.
@@ -52,7 +53,7 @@ public class Usuario extends Pessoa{
     public boolean removerLivro(Livro livro) {
         if (livrosEmprestados.contains(livro)) {
             livrosEmprestados.remove(livro);
-            livro.devolver();
+            livro.devolver();  // Método que deverá ser implementado na classe Livro
             return true;
         } else {
             return false;
